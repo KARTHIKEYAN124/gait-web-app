@@ -9,9 +9,9 @@ st.title("🚶 Gait Silhouette Classification")
 
 @st.cache_resource
 def load_models():
-    cnn = tf.keras.models.load_model("cnn.keras")
-    mob = tf.keras.models.load_model("mobilenet.keras")
-    eff = tf.keras.models.load_model("effnet.keras")
+    cnn = tf.keras.models.load_model("cnn.keras", compile=False)
+    mob = tf.keras.models.load_model("mobilenet.keras", compile=False)
+    eff = tf.keras.models.load_model("effnet.keras", compile=False)
     return cnn, mob, eff
 
 cnn_model, mob_model, eff_model = load_models()
